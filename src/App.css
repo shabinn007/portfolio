@@ -1,8 +1,15 @@
 /** @format */
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --primary-color: #0077ff;
+}
+
 body {
-  background-color: #f3f3f3;
+  background-color: var(--body_background);
   font-family: "Neue Montreal", sans-serif;
-  /* font-size: 21px; */
+  color: var(--body_color);
 }
 
 .intro {
@@ -115,3 +122,20 @@ body {
   font-size: 18px;
   /* position: absolute; */
 }
+/* .hoverimages {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  float: right;
+}
+.react2,
+.nodejs2,
+.express2 {
+  display: none;
+}
+.react1:hover + .react2 {
+  display: inline-block;
+}
+.react2:hover {
+  display: none;
+} */

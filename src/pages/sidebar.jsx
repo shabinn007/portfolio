@@ -5,6 +5,7 @@ import "../App.css";
 // import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
 import "animate.css/animate.min.css";
+import DarkMode from "./DarkMode";
 
 const sidebar = ({ children }) => {
   const icon = {
@@ -54,25 +55,28 @@ const sidebar = ({ children }) => {
     // </div>
 
     <motion.nav
-      className="navbar d-flex pt-5 animate__animated animate__fadeInDown"
+      className="navbar d-flex pt-5 animate__animated   animate__fadeInDown"
       style={{ justifyContent: "space-between" }}
       // initial={{ opacity: 0, y: -100 }}
       // animate={{ opacity: 1, y: 0 }}
       // transition={{ delay: 1.5, duration: 1 }}
     >
       <h1>Mohammed Shabin</h1>
-      <motion.button
-        class="contactbtn"
-        whileHover={{
-          backgroundColor: "#111",
-          color: "white",
-          transition: { type: "tween" },
-        }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-      >
-        Contact
-      </motion.button>
+      <div className="btn" style={{ display: "flex", alignItems: "center" }}>
+        <DarkMode />
+        <motion.button
+          class="contactbtn"
+          whileHover={{
+            backgroundColor: "#111",
+            color: "white",
+            transition: { type: "tween" },
+          }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          Contact
+        </motion.button>
+      </div>
     </motion.nav>
   );
 };
