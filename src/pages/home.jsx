@@ -1,26 +1,21 @@
 /** @format */
-import React from "react";
-import dp from "../assets/dp.jpg";
-import wall from "../assets/wall.jpg";
+import React, { useState } from "react";
+import Palliative from "../assets/palliative.png";
+import palliative2 from "../assets/pallaitive2.png";
+import resso from "../assets/resso.png";
+import edison from "../assets/edison.png";
+import edison2 from "../assets/edison2.png";
+import resso2 from "../assets/resso2.png";
 import { AiFillLinkedin, AiOutlineGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { BsInstagram, IconName } from "react-icons/bs";
 import { motion } from "framer-motion";
 import "animate.css/animate.min.css";
-// import react1 from "../assets/react1.png";
-// import node1 from "../assets/node1.png";
-// import expres1 from "../assets/exp1.png";
-// import react from "../assets/rrr.png";
-// import node from "../assets/noddd.png";
-// import expres from "../assets/exp2.png";
 import native from "../assets/reactnative-unscreen.gif";
 import { saveAs } from "file-saver";
-
-// import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
-// import { useHistory } from "react-router-dom";
-// import { navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import "../App.css";
 
 function downloadCV() {
   const fileUrl = "/React js Developer.pdf";
@@ -35,6 +30,10 @@ function Home() {
     console.log(handleClick);
     navigate("/link");
   };
+  const [isHoveredresso, setIsHoveredresso] = useState(false);
+  const [isHoveredpalliative, setIsHoveredpalliative] = useState(false);
+  const [isHoveredxplor, setIsHoveredxplor] = useState(false);
+  const [isHoverededison, setIsHoverededison] = useState(false);
   return (
     <div>
       {/* <div className="hoverimages">
@@ -72,7 +71,11 @@ function Home() {
               letterSpacing: "-.02rem",
             }}
           >
-            <img src={native} style={{ width: "25%", float: "right" }} />
+            <img
+              className="animate__animated animate__fadeInUp"
+              src={native}
+              style={{ width: "25%", float: "right" }}
+            />
             Digital Designer & <br />
             Front-end Developer
           </div>
@@ -95,28 +98,69 @@ function Home() {
           <div className="projectHeading">Projects</div>
           <div className="gridProjects">
             <div className="wrapper">
-              <img src={dp} alt="" style={{ height: "85%", width: "100%" }} />
+              <img
+                src={isHoveredpalliative ? palliative2 : Palliative}
+                onMouseOver={() => setIsHoveredpalliative(true)}
+                onMouseOut={() => setIsHoveredpalliative(false)}
+                alt=""
+                style={{
+                  height: "85%",
+                  width: "100%",
+                  border: "1px solid black",
+                }}
+              />
               <div className="sub">
                 <p>Pain and Palliative</p>
                 <p style={{ color: "grey" }}>design & development</p>
               </div>
             </div>
             <div className="wrapper">
-              <img src={wall} alt="" style={{ height: "85%", width: "100%" }} />
+              <img
+                src={isHoveredresso ? resso2 : resso}
+                onMouseOver={() => setIsHoveredresso(true)}
+                onMouseOut={() => setIsHoveredresso(false)}
+                // className="image"
+                className={isHoveredresso ? "hovered" : ""}
+                alt=""
+                style={{
+                  height: "85%",
+                  width: "100%",
+                  border: "1px solid black",
+                }}
+              />
               <div className="sub">
                 <p>Kairali Resso</p>
                 <p style={{ color: "grey" }}>development</p>
               </div>
             </div>
             <div className="wrapper">
-              <img src={dp} alt="" style={{ height: "85%", width: "100%" }} />
+              <a href="https://edison-valley-new.vercel.app/">
+                <img
+                  src={isHoverededison ? edison2 : edison}
+                  onMouseOver={() => setIsHoverededison(true)}
+                  onMouseOut={() => setIsHoverededison(false)}
+                  alt=""
+                  style={{
+                    height: "85%",
+                    width: "100%",
+                    border: "1px solid black",
+                  }}
+                />
+              </a>
               <div className="sub">
                 <p>Edison Valley</p>
                 <p style={{ color: "grey" }}>development</p>
               </div>
             </div>
             <div className="wrapper">
-              <img src={wall} alt="" style={{ height: "85%", width: "100%" }} />
+              <img
+                alt=""
+                style={{
+                  height: "85%",
+                  width: "100%",
+                  border: "1px solid black",
+                }}
+              />
               <div className="sub">
                 <p>XPLOR</p>
                 <p style={{ color: "grey" }}>design & development</p>
