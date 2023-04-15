@@ -36,29 +36,6 @@ function Home() {
   const [isHoverededison, setIsHoverededison] = useState(false);
   return (
     <div>
-      {/* <div className="hoverimages">
-        <img src={react1} className="react1" />
-        <img src={node1} className="node1" />
-        <img src={expres1} className="express1" />
-        <img
-          src={react}
-          alt=""
-          style={{ marginTop: "-20px", marginLeft: "38px" }}
-          className="react2"
-        />
-        <img
-          src={node}
-          alt=""
-          style={{ width: "88%", marginLeft: "25px" }}
-          className="nodejs2"
-        />
-        <img
-          src={expres}
-          alt=""
-          style={{ width: "72%", marginLeft: "38px" }}
-          className="express2"
-        />
-      </div> */}
       <div className="pt-5">
         {/* .........................................intro........................................... */}
         <motion.section className="intro mt-5 pt-5" style={{ height: "100vh" }}>
@@ -83,9 +60,11 @@ function Home() {
             className="animate__animated animate__fadeInUp"
             style={{ fontSize: "24px" }}
           >
-            qhfwbwksbbuiniusnnk <br />
-            ndsvkjkdjvnsksfk sjv vskj kskf vksjv <br />
-            ugbfnkdjdfnbjkfdnbkjdnbjndn
+            I'm Shabin, a digital designer and a web developer
+            <br />
+            Pushing the boundaries of web design and
+            <br />
+            development with React.
           </p>
         </motion.section>
         <div
